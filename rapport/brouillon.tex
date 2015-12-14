@@ -1,0 +1,101 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=1pt, bottom=1pt, left=50pt, right=50pt]{geometry}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{url}
+\usepackage{listings}
+
+\begin{document}
+
+\title{Rapport codes correcteur}
+\author{Cyril BIDAUD -- Corentin CHEPEAU -- Benjamin SEBILLE}
+\date{\today} 
+
+\maketitle
+
+
+\tableofcontents
+
+\chapter*{Exo}
+G = $\begin{pmatrix}
+   0 & 0 & 1\\
+   0 & 1 & 0\\
+   0 & 1 & 1\\
+   1 & 0 & 0\\
+   1 & 0 & 1\\
+   1 & 1 & 0\\
+   1 & 1 & 1 
+\end{pmatrix}$
+
+\chapter{Outils Mathématique utilisé}
+	\section{Ensemble}
+		\subsection{Corps}
+			\subsubsection{Addition}
+
+			\subsubsection{Multiplication}
+
+		\subsection{Structure d'espace vectoriel}
+
+
+
+	\section{Matrice}
+\chapter{Algorithme détection d'erreur}
+	\section{Code de Hamming}
+		\subsection{$C(7,4)$}
+		\lstset{language=C}
+		\lstinputlisting{../hamming/myerror.c}
+
+voir \url{http://agreg-maths.univ-rennes1.fr/documentation/docs/codes.pdf} \\
+
+
+\section{programmer des procédures qui opère dans les ensembles quotients de polynômes (groupe de Galois), c'est à dire l'addition, la multiplication, algo d'Euclide, etc.}
+
+Définition groupe de galois avec un polynome : \url{https://fr.wikipedia.org/wiki/Groupe_de_Galois#D.C3.A9finition} \\
+Exemple groupe de galois sur des polynome : \url{https://fr.wikipedia.org/wiki/Groupe_de_Galois#Exemples} \\
+
+Théorie de Galois et géométrie algébrique : \url{http://webusers.imj-prg.fr/~jan.nekovar/co/ln/gal/g.pdf} \\
+
+Aide compréhension Groupe de Galois : \url{http://www.rennes.supelec.fr/ren/rd/scee/ftp/docs/corpsdegalois.pdf} \\
+Aide compréhension Groupe de Galois 2 : \url{http://blogperso.univ-rennes1.fr/jeremy.le-borgne/public/introgalois.pdf} \\
+
+Définitions et Exemples de Groupe en Algèbre Linéaire : \url{http://stephane.gonnord.org/PCSI/Algebre/STRUCTURES.PDF} \\
+
+Algorithme d'Euclide (PGCD) : \url{https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide#Fractions_continues} \\
+
+Algèbres de Polynômes : \url{http://www.univ-orleans.fr/mapmo/membres/khaoula/enseignement/cours-algebre.pdf} \\
+
+CDI : Mathématique pour informatique (chapitre code correcteur), Calcul avec des logiciels  \\
+voir td licence : \url{http://download.tuxfamily.org/tehessinmath/les%20pdf/TDcodesLineaires.pdf} \\
++ calcul avec des logiciels libres \\
+
+\section{construire un code linéaire de détection et correction d'erreurs (parité, Hamming et BCH)}
+
+encode 7,4 hamming python \\
+- 7 bits dont 4 bits pour le message et 3 bits de parité. \\
+la somme de contrôle correspond aux 3 bits de parité, elle peut ensuite permettre la correction d'erreur {\centering{}\huge(\textbf{A TRAVAILLER})} \\
+
+voir : \url{https://fr.wikipedia.org/wiki/Code_de_Hamming#Exemple_:_le_cas_binaire_de_longueur_quatre} \\
+
+
+REGARDER \url{http://www.isima.fr/~vbarra/IMG/pdf/codes_correcteurs.pdf} \\
+
+
+\section{Bonus: même  travail sur le code de Reed-Solomon}
+
+
+chapitres intéressants : \\
+
+
+STRUCTURE DU RAPPORT :
+\begin{itemize} 
+    \item les recherches documentaires      
+    \item outils mathématiques
+    \item polynômes
+    \item hamming
+    \item reed-solomon
+\end{itemize}
+ \url{https://www.overleaf.com/3867798jrgdqv}
+ \end{document}
